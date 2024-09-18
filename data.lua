@@ -1,3 +1,5 @@
+---Categories and items in each category to be un-hidden
+---@type { [string]: string[] }
 local categorized_items = {
     ["copy-paste-tool"] = {
         "copy-paste-tool",
@@ -7,7 +9,6 @@ local categorized_items = {
         "coin",
         "item-unknown",
         "simple-entity-with-owner",
-
     },
     ["selection-tool"] = {
         "selection-tool",
@@ -25,7 +26,7 @@ local categorized_items = {
 
 for category,items in pairs(categorized_items) do
     for _, item in ipairs(items) do
-        local flags = data.raw[category][item].flags
+        local flags = data.raw[category][item]--[[@as data.ItemPrototype]].flags
         if flags then
             for n,flag in ipairs(flags) do
                 if flag=="hidden" then
