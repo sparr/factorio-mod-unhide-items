@@ -1,4 +1,18 @@
 ---------------------------------------------------------------------------------------------------
+Version: 2.1.0
+Date: 2026-09-06
+  Other:
+    - Update for Factorio 2.1
+  Bugfixes:
+    - Unhide items again: 2.0 replaced the hidden item flag with a property
+    - signal-unknown now really appears; giving it a subgroup was never enough on its own
+  Features:
+    - Find the hidden prototypes instead of listing them, so items hidden by other mods and
+      by future versions of the game are unhidden too. 2.1 with Space Age hides forty items
+      where the list this mod carried from 1.1 named six.
+    - Leave the loaders, the fluid valves and the lane splitter hidden: they sit among the
+      belts and pipes they are easily mistaken for, and cannot be obtained anyway
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2022-09-04
   Features:
